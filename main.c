@@ -1,4 +1,10 @@
-
+/*
+ * Here we are using MSP430G2553
+ * Description: proper implimentation of the MSP430 Timer module.
+ * In this code I amusing two capture compare registers to generate time delay,
+ *  and also keeeping the CPU in low power mode for saving the battery.
+ *  The code is perfectly working and tested, using MSP430UIF FET and MSP430G2 Launchpad on Mac OS X
+ */
 #include <msp430.h>
 unsigned int count=0;
 int main(void)
