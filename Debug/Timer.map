@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.6                    
 ******************************************************************************
->> Linked Sun Jun 19 18:44:04 2016
+>> Linked Sun Jun 19 18:46:41 2016
 
 OUTPUT FILE NAME:   <Timer.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 0000c07c
