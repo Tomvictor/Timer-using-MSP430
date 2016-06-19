@@ -24,8 +24,9 @@ int main(void)
   //CCTL2 = OUTMOD_4 + CCIE;                  // CCR1 toggle, interrupt enabled
   TACTL = TASSEL_1 + ID_3 + MC_2;                  // ACLK, Timer A input divider: 3 - /8 ,Continous up
 
-  P1OUT |= BIT0 ;
-  CCR0 = 1000;
+  //P1OUT |= BIT0 ;
+  CCR0 = 100;
+  CCR1 = 200;
 
   __bis_SR_register(LPM0_bits + GIE);       // Enter LPM0 w/ interrupt
 } //Main end
@@ -36,7 +37,7 @@ __interrupt void Timer_A0 (void)
 
 {
   P1OUT ^= BIT0 ;
-  CCR1 = TAR + 2000 ;                              // Add Offset to CCR1
+  CCR0 = TAR + 100 ;                              // Add Offset to CCR1
 }
 
 // Timer_A2 Interrupt Vector (TA0IV) handler
@@ -49,8 +50,8 @@ __interrupt void Timer_A1(void)
   {
   case  2:
 	  //CCR1 += 1000 ;                    // Add Offset to CCR1
-	  P1OUT ^= BIT0 ;
-	  CCR0 = TAR + 1000   ;
+	  P1OUT ^= BIT6 ;
+	  CCR1 = TAR + 200   ;
 
            break;
   case  4:
