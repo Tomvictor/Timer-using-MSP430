@@ -40,7 +40,7 @@ __interrupt void Timer_A0 (void)
   CCR0 = TAR + 20 ;                              // Add Offset to CCR1
 }
 
-// Timer_A2 Interrupt Vector (TA0IV) handler
+// Timer_A2 Interrupt Vector (TA0IV) handler for CCR1 and CCR2
 #pragma vector=TIMER0_A1_VECTOR
 __interrupt void Timer_A1(void)
 
