@@ -20,7 +20,7 @@ int main(void)
   P2OUT = 0;                                // All P2.x reset
   // from timer
   CCTL0 =  CCIE;                  // CCR0 toggle, interrupt enabled
-  CCTL1 =  + CCIE;                  // CCR1 toggle, interrupt enabled
+  CCTL1 =  CCIE;                  // CCR1 toggle, interrupt enabled
   //CCTL2 = OUTMOD_4 + CCIE;                  // CCR1 toggle, interrupt enabled
   TACTL = TASSEL_1 + ID_3 + MC_2;                  // ACLK, Timer A input divider: 3 - /8 ,Continous up
 
